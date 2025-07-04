@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="result-bg">
+    <div class="result-container">
+        <h2>🎉 House Price Prediction</h2>
+        <div class="result-box">
+            <p class="result-text">Estimated House Price:</p>
+            <h1 class="price">${{ prediction }}K</h1>
+        </div>
+        <a href="{{ url_for('predict') }}" class="glass-button">Predict Another</a>
+        <a href="{{ url_for('home') }}" class="glass-button">Go to Home</a>
+    </div>
+</body>
+</html>

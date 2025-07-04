@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boston Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .highlight {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+        .tech {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+        .made-by {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: #aaa;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="home-bg">
+    <div class="home-container">
+        <h1 class="animated-text">🏠 Predict Boston House Prices</h1>
+        <p>✨ Enter house details & get instant price predictions powered by <span class="highlight">Machine Learning</span></p>
+
+        <div class="tech">
+            🔧 Built using <span class="highlight">Flask</span>, <span class="highlight">Linear Regression</span>, <span class="highlight">HTML/CSS/JS</span>
+        </div>
+
+        <div class="made-by">
+            Made with ❤️ by <span class="highlight">Asim Hanif</span>
+        </div>
+
+        <a href="{{ url_for('predict') }}" class="glass-button">Start Prediction</a>
+    </div>
+</body>
+</html>

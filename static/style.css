@@ -1,0 +1,187 @@
+/* Common Styles for All Pages */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+/* ---------- Home Page ---------- */
+body.home-bg {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animated-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+    }
+    to {
+        text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ccff;
+    }
+}
+
+.glass-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 10px;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.project-details {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.project-details p, .project-details ul {
+    margin-bottom: 10px;
+}
+
+.project-details ul {
+    padding-left: 20px;
+}
+
+.creator-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    color: #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.creator-card h3 {
+    margin-bottom: 10px;
+    color: #00ffcc;
+}
+
+
+/* ---------- Prediction Form Page ---------- */
+body.form-bg {
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* ---------- Result Page ---------- */
+body.result-bg {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.result-container {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+}
+
+.result-box {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+.result-text {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 3rem;
+    color: #00ffcc;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}

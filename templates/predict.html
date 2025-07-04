@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Predict House Price</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .step { display: none; }
+    .step.active { display: block; }
+  </style>
+</head>
+<body class="form-bg">
+  <div class="form-container">
+    <h2>🏠 Enter House Features</h2>
+    <form id="predictForm" method="POST" action="{{ url_for('result') }}">
+      
+      <!-- Step 1 -->
+      <div class="step step-1 active">
+        <div class="form-group">
+          <label>Crime Rate (CRIM)</label>
+          <input type="number" name="CRIM" placeholder="e.g., 0.2" step="any" required>
+        </div>
+        <div class="form-group">
+          <label>Land Zoned (ZN)</label>
+          <input type="number" name="ZN" placeholder="e.g., 25.0" step="any" required>
+        </div>
+        <div class="form-group">
+          <label>Industrial Area (INDUS)</label>
+          <input type="number" name="INDUS" placeholder="e.g., 5.0" step="any" required>
+        </div>
+        <div class="form-group">
+          <label>Bounds River (CHAS)</label>
+          <input type="number" name="CHAS" placeholder="0 for No, 1 for Yes" step="1" required>
+        </div>
+        <div class="form-group">
+          <label>Air Pollution (NOX)</label>
+          <input type="number" name="NOX" placeholder="e.g., 0.5" step="any" required>
+        </div>
+        <div class="form-group">
+          <label>Average Rooms (RM)</label>
+          <input type="number" name="RM" placeholder="e.g., 6.2" step="any" required>
+        </div>
+        <button type="button" class="glass-button" onclick="nextStep()">Next</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step step-2">
+        <div class="form-group">
+          <label>House Age (AGE)</label>
+          <input type="number" name="AGE" placeholder="e.g., 65.0" step="any" required>
+        </div>
+        <div class="form-group">
+          <label>Distance to Center (DIS)</label>
+          <input type="number" name="DIS" placeholder="e.g., 4.5" step="any" required>
+        </div>
+        <div class="form-group">
+          <label>Highway Access (RAD)</label>
+          <input type="number" name="RAD" placeholder="1 to 24" step="1" required>
+        </div>
+        <div class="form-group">
+          <label>Tax Rate (TAX)</label>
+          <input type="number" name="TAX" placeholder="e.g., 300" step="any" required>
+        </div>
+        <div class="form-group">
+          <label>Pupil-Teacher Ratio (PTRATIO)</label>
+          <input type="number" name="PTRATIO" placeholder="e.g., 18.0" step="any" required>
+        </div>
+        <div class="form-group">
+          <label>Black Population (B)</label>
+          <input type="number" name="B" placeholder="e.g., 390.0" step="any" required>
+        </div>
+        <div class="form-group">
+          <label>Lower Income % (LSTAT)</label>
+          <input type="number" name="LSTAT" placeholder="e.g., 12.0" step="any" required>
+        </div>
+        <button type="button" class="glass-button" onclick="prevStep()">Back</button>
+        <button type="submit" class="glass-button">Predict</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function nextStep() {
+      document.querySelector('.step-1').classList.remove('active');
+      document.querySelector('.step-2').classList.add('active');
+    }
+    function prevStep() {
+      document.querySelector('.step-2').classList.remove('active');
+      document.querySelector('.step-1').classList.add('active');
+    }
+  </script>
+</body>
+</html>
