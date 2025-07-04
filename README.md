@@ -21,12 +21,12 @@ A stylish and intelligent web application that predicts house prices in Boston u
 ### 📸 Screenshots
 
 
-HOME PAGE:
-https://github.com/codedbyasim/House-Price-Predection/blob/main/Screenshots/Home.PNG
-FORM PAGE:
-https://github.com/codedbyasim/House-Price-Predection/blob/main/Screenshots/Form1.PNG
-RESULT:
-https://github.com/codedbyasim/House-Price-Predection/blob/main/Screenshots/Result.PNG
+| Page               | Preview                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------- |
+| **🏠 Home Page**   | ![Home](https://github.com/codedbyasim/House-Price-Predection/blob/main/Screenshots/Home.PNG)     |
+| **📝 Form Page**   | ![Form](https://github.com/codedbyasim/House-Price-Predection/blob/main/Screenshots/Form1.PNG)    |
+| **📈 Result Page** | ![Result](https://github.com/codedbyasim/House-Price-Predection/blob/main/Screenshots/Result.PNG) |
+
 
 ---
 
